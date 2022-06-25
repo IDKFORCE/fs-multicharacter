@@ -2,8 +2,8 @@
 
 Just An Edit Version Of The Latest qb-multicharacter
 
-if your using (qb-clothing) go to line 147 and take the two dash -- out
-if your using (fivem-appearance) the export is in line 148 and is already set up
+if your using (qb-clothing) go to line 147 qb-multicharacter/client and take the two dash -- out
+if your using (fivem-appearance) the export is in line 148 In qb-multicharacter/client and is already set up
 
 
 ## Dependencies
