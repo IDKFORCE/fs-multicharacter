@@ -44,9 +44,10 @@ ensure qb-weathersync
         cb(nil)
     end
 end)```
+
 ## Replace the RegisterNUICallback('cDataPed', function(nData, cb) callback on Line: 118 of qb-multicharacter/client/main.lua with:
-```
-RegisterNUICallback('cDataPed', function(nData, cb)
+
+```RegisterNUICallback('cDataPed', function(nData, cb)
     local cData = nData.cData
     SetEntityAsMissionEntity(charPed, true, true)
     DeleteEntity(charPed)
