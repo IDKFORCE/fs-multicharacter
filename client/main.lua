@@ -126,9 +126,9 @@ RegisterNUICallback('cDataPed', function(nData, cb)
     SetEntityAsMissionEntity(charPed, true, true)
     DeleteEntity(charPed)
     if cData ~= nil then
-        QBCore.Functions.TriggerCallback('fs-multicharacter:server:getSkin', function(model, data)
-            model = model ~= nil and tonumber(model) or false
-            if model ~= nil then
+        QBCore.Functions.TriggerCallback('fs-multicharacter:server:getSkin', function(skinData)
+            if skinData then
+                local model = skinData.model
                 CreateThread(function()
                     RequestModel(model)
                     while not HasModelLoaded(model) do
@@ -137,17 +137,12 @@ RegisterNUICallback('cDataPed', function(nData, cb)
                     charPed = CreatePed(2, model, Config.PedCoords.x, Config.PedCoords.y, Config.PedCoords.z - 0.98, Config.PedCoords.w, false, true)
                     local  RandomAnims = {     
                         "WORLD_HUMAN_HANG_OUT_STREET",
-                        "WORLD_HUMAN_STAND_IMPATIENT",
                         "WORLD_HUMAN_STAND_MOBILE",
                         "WORLD_HUMAN_SMOKING_POT",
                         "WORLD_HUMAN_LEANING",
-                        "WORLD_HUMAN_DRUG_DEALER_HARD",
                         "WORLD_HUMAN_SUPERHERO",
-                        "WORLD_HUMAN_TOURIST_MAP",
                         "WORLD_HUMAN_YOGA",
                         "WORLD_HUMAN_BINOCULARS",
-                        "WORLD_HUMAN_BUM_WASH",
-                        "WORLD_HUMAN_CONST_DRILL",
                         "WORLD_HUMAN_MOBILE_FILM_SHOCKING",
                         "WORLD_HUMAN_MUSCLE_FLEX",
                         "WORLD_HUMAN_MUSICIAN",
@@ -164,7 +159,7 @@ RegisterNUICallback('cDataPed', function(nData, cb)
                     SetBlockingOfNonTemporaryEvents(charPed, true)
                     data = json.decode(data)
                     --TriggerEvent('qb-clothing:client:loadPlayerClothing', data, charPed) -- if your using qb-clothing 
-                    exports['fivem-appearance']:setPedAppearance(charPed, data)
+                    exports['fivem-appearance']:setPedAppearance(charPed, skinData)
                 end)
             else
                 CreateThread(function()
