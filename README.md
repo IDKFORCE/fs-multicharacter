@@ -1,5 +1,9 @@
 # fs-multicharacter
 
+```My Discord```
+- [Discord](https://discord.gg/6kJ5ubDEWE)
+
+
 Just An Edit Version Of The Latest qb-multicharacter
 
 if your using (qb-clothing) go to line 166 fs-multicharacter/client and take the two dash -- out
