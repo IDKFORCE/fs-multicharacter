@@ -1,7 +1,7 @@
 # fs-multicharacter
 
 ```My Discord```
-- [Discord](https://discord.gg/6kJ5ubDEWE)
+- [Discord](https://discord.gg/UFng7DWnWP)
 
 
 Just An Edit Version Of The Latest qb-multicharacter
